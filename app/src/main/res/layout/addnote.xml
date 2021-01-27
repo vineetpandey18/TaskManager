@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true">
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@android:color/white" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageView
+        android:id="@+id/search_main"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="20dp"
+        android:src="@mipmap/backbutton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <ImageView
+        android:id="@+id/sort_main"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="20dp"
+        android:src="@mipmap/alarm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view" />
+
+
+    <TextView
+        android:id="@+id/create_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Create Note"
+        android:textColor="@color/md_indigo_A200"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/note_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:hint="Title"
+        android:maxLines="1"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/note_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:hint="Description"
+        android:maxLines="5"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/note_title" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/note_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FFFF"
+        android:src="@mipmap/save"
+        app:fabSize="normal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/note_description" />
+</androidx.constraintlayout.widget.ConstraintLayout>
